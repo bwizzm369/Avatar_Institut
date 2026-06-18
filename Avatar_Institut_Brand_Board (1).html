@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avatar Institut – Brand System Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0F0F0F;
+  color: #F7F5F0;
+  font-family: 'Inter', sans-serif;
+  min-width: 1200px;
+}
+
+/* HEADER */
+.hdr {
+  background: #0A0A0A;
+  padding: 22px 32px 18px;
+  border-bottom: 1px solid #1D1D1D;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo-svg { flex-shrink: 0; }
+
+.hcenter { flex: 1; }
+
+.bnar {
+  font-family: 'Cairo', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #F7F5F0;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+
+.bnen {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #C6A15B;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.tagrow { display: flex; gap: 12px; align-items: center; }
+.tgen { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-style: italic; color: #8A8A8A; letter-spacing: 1px; }
+.tgar { font-family: 'Cairo', sans-serif; font-size: 10px; color: #8A8A8A; direction: rtl; }
+.dot { color: #333; }
+
+.hmeta { text-align: right; flex-shrink: 0; }
+.bpill {
+  background: #1A1A1A;
+  border: 0.5px solid #C6A15B;
+  border-radius: 2px;
+  padding: 4px 12px;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C6A15B;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.stags { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.stag {
+  font-size: 7px;
+  color: #8A8A8A;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border: 0.5px solid #2A2A2A;
+  border-radius: 1px;
+}
+
+/* GOLD LINE */
+.gold-line { height: 1px; background: #C6A15B; opacity: 0.5; }
+
+/* GRID */
+.grow { display: flex; border-top: 1px solid #1D1D1D; }
+.gc { flex: 1; border-right: 1px solid #1D1D1D; padding: 16px 14px; }
+.gc:last-child { border-right: none; }
+.sdiv { height: 1px; background: #1D1D1D; }
+
+/* Labels */
+.sl {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C6A15B;
+  margin-bottom: 4px;
+}
+.al {
+  font-family: 'Cairo', sans-serif;
+  font-size: 8px;
+  color: #555;
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 9px;
+}
+
+/* COLOR PALETTE */
+.prow { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.si { display: flex; align-items: center; gap: 9px; }
+.sw { width: 28px; height: 28px; border-radius: 3px; flex-shrink: 0; border: 0.5px solid rgba(255,255,255,0.07); }
+.shx { font-size: 8px; font-weight: 600; color: #C6A15B; letter-spacing: 1px; }
+.snm { font-size: 7px; color: #8A8A8A; margin-top: 1px; }
+
+/* TYPOGRAPHY */
+.ti2 { margin-bottom: 9px; padding-bottom: 9px; border-bottom: 0.5px solid #1A1A1A; }
+.ti2:last-child { border-bottom: none; margin-bottom: 0; }
+.tr2 { font-size: 7px; color: #C6A15B; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px; }
+.ts-ar { font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #F7F5F0; direction: rtl; text-align: right; }
+.ts-h1 { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #F7F5F0; }
+.ts-h2 { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: #C6A15B; font-style: italic; }
+.ts-bd { font-family: 'Inter', sans-serif; font-size: 9px; color: #8A8A8A; line-height: 1.5; }
+.tfn { font-size: 7px; color: #3A3A3A; margin-top: 2px; font-style: italic; }
+
+/* MISSION / VISION */
+.mb { margin-top: 8px; padding: 11px; background: #141414; border-radius: 3px; border-top: 2px solid #C6A15B; }
+.vb { margin-top: 6px; padding: 11px; background: #141414; border-radius: 3px; border-top: 1px solid #2A2A2A; }
+.ml { font-size: 7px; letter-spacing: 2px; text-transform: uppercase; color: #C6A15B; margin-bottom: 5px; }
+.mtar { font-family: 'Cairo', sans-serif; font-size: 9px; color: #B0A890; direction: rtl; text-align: right; line-height: 1.6; margin-bottom: 6px; }
+.mten { font-size: 8px; color: #8A8A8A; line-height: 1.6; }
+
+/* CATEGORY */
+.cpills { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+.cp { padding: 6px 9px; background: #181818; border: 0.5px solid #C6A15B; border-radius: 2px; display: flex; justify-content: space-between; align-items: center; }
+.cpen { font-size: 7px; font-weight: 600; color: #C6A15B; text-transform: uppercase; letter-spacing: 1px; }
+.cpar { font-family: 'Cairo', sans-serif; font-size: 8px; color: #8A8A8A; direction: rtl; }
+.vp { margin-top: 8px; padding: 10px; background: #141414; border-radius: 3px; border-bottom: 2px solid #C6A15B; }
+
+/* VALUES */
+.vgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 8px; }
+.vc { background: #181818; border: 0.5px solid #252525; border-radius: 3px; padding: 7px 8px; border-left: 2px solid #C6A15B; }
+.ven { font-size: 8px; font-weight: 600; color: #F7F5F0; text-transform: uppercase; letter-spacing: 0.3px; }
+.var2 { font-family: 'Cairo', sans-serif; font-size: 8px; color: #8A8A8A; direction: rtl; text-align: right; margin-top: 2px; }
+
+/* TONE */
+.tlist { margin-top: 8px; display: flex; flex-direction: column; gap: 5px; }
+.titem { display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1A1A1A; padding-bottom: 5px; }
+.titem:last-child { border-bottom: none; }
+.ten { font-family: 'Cormorant Garamond', serif; font-size: 12px; font-style: italic; color: #C6A15B; }
+.tar { font-family: 'Cairo', sans-serif; font-size: 9px; color: #8A8A8A; direction: rtl; }
+
+/* AUDIENCE */
+.agrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: 8px; }
+.aitem { background: #141414; border: 0.5px solid #222; border-radius: 3px; padding: 7px 6px; text-align: center; }
+.aicon { font-size: 15px; color: #C6A15B; margin-bottom: 3px; }
+.aen { font-size: 7px; font-weight: 600; color: #F7F5F0; text-transform: uppercase; letter-spacing: 0.3px; line-height: 1.4; }
+.aar { font-family: 'Cairo', sans-serif; font-size: 7px; color: #8A8A8A; direction: rtl; margin-top: 2px; }
+
+/* PILLARS */
+.plist { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+.pitem { padding: 6px 9px; background: #141414; border-radius: 2px; border-left: 2px solid transparent; display: flex; justify-content: space-between; align-items: center; }
+.pitem:nth-child(odd) { border-left-color: #C6A15B; }
+.pitem:nth-child(even) { border-left-color: #2A2A2A; }
+.pen { font-size: 8px; font-weight: 500; color: #D8D0C0; }
+.par { font-family: 'Cairo', sans-serif; font-size: 8px; color: #8A8A8A; direction: rtl; }
+
+/* SERVICES */
+.slist { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+.sitem { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: #141414; border-radius: 2px; border: 0.5px solid #1E1E1E; }
+.sen { font-size: 8px; font-weight: 500; color: #F7F5F0; }
+.sar { font-family: 'Cairo', sans-serif; font-size: 8px; color: #8A8A8A; direction: rtl; }
+
+/* GUIDELINES */
+.ggrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.dob { background: #0D180D; border: 0.5px solid #1C361C; border-radius: 3px; padding: 9px; }
+.dnb { background: #180D0D; border: 0.5px solid #361C1C; border-radius: 3px; padding: 9px; }
+.gh { font-size: 7px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 7px; }
+.doh { color: #5A9A5A; }
+.dnh { color: #9A5A5A; }
+.gi { font-size: 7px; color: #8A8A8A; margin-bottom: 4px; line-height: 1.5; padding-left: 11px; position: relative; }
+.dob .gi::before { content: "✓"; color: #5A9A5A; position: absolute; left: 0; }
+.dnb .gi::before { content: "✗"; color: #9A5A5A; position: absolute; left: 0; }
+
+.sref { margin-top: 8px; padding: 8px; background: #141414; border-radius: 3px; text-align: center; }
+.rtags { display: flex; gap: 5px; flex-wrap: wrap; justify-content: center; margin-top: 5px; }
+.rtag { font-size: 7px; color: #8A8A8A; padding: 2px 7px; border: 0.5px solid #2A2A2A; border-radius: 2px; }
+
+/* FEATURES */
+.flist { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+.fitem { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: #141414; border-radius: 2px; border: 0.5px solid #1E1E1E; }
+.fen { font-size: 8px; font-weight: 500; color: #F7F5F0; }
+.far2 { font-family: 'Cairo', sans-serif; font-size: 8px; color: #8A8A8A; direction: rtl; }
+
+/* LOGO VARIANTS */
+.lvs { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.lvd { padding: 12px; background: #141414; border-radius: 3px; display: flex; align-items: center; gap: 12px; }
+.lvl { padding: 12px; background: #F7F5F0; border-radius: 3px; display: flex; align-items: center; gap: 12px; }
+.vnar { font-family: 'Cairo', sans-serif; font-size: 8px; font-weight: 700; direction: rtl; text-align: right; line-height: 1.4; }
+.vnen { font-size: 6px; color: #8A8A8A; letter-spacing: 1px; text-transform: uppercase; }
+.mono { padding: 10px; background: #0A0A0A; border: 0.5px solid #C6A15B; border-radius: 3px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.mw { font-family: 'Cormorant Garamond', serif; font-size: 7px; color: #C6A15B; letter-spacing: 3px; text-transform: uppercase; line-height: 1.7; }
+.tlup { padding: 9px; background: #181818; border-radius: 3px; text-align: center; }
+.tlbl { font-size: 6px; color: #444; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.tlen { font-family: 'Cormorant Garamond', serif; font-size: 10px; font-style: italic; color: #C6A15B; letter-spacing: 1px; }
+.tlar { font-family: 'Cairo', sans-serif; font-size: 9px; color: #8A8A8A; direction: rtl; margin-top: 3px; }
+
+/* FOOTER */
+.ftr { background: #080808; border-top: 1px solid #1D1D1D; padding: 13px 32px; display: flex; align-items: center; justify-content: space-between; }
+.fl { display: flex; align-items: center; gap: 16px; }
+.fbrar { font-family: 'Cairo', sans-serif; font-size: 9px; font-weight: 600; color: #C6A15B; direction: rtl; }
+.fbrde { font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #8A8A8A; font-style: italic; }
+.fvd { width: 0.5px; height: 18px; background: #2A2A2A; }
+.ftl { font-family: 'Cormorant Garamond', serif; font-size: 12px; font-style: italic; color: #C6A15B; letter-spacing: 1px; }
+.fyr { font-size: 7px; color: #333; letter-spacing: 2px; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ HEADER -->
+<div class="hdr">
+
+  <!-- OFFICIAL LOGO: circle + centered dot -->
+  <svg class="logo-svg" width="90" height="114" viewBox="0 0 90 114" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="45" cy="42" r="32" fill="none" stroke="#C6A15B" stroke-width="1.3"/>
+    <circle cx="45" cy="42" r="4.5" fill="#C6A15B"/>
+    <line x1="10" y1="84" x2="80" y2="84" stroke="#C6A15B" stroke-width="0.4" opacity="0.5"/>
+    <text x="45" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8.5" font-weight="400" letter-spacing="3" fill="#F7F5F0">AVATAR INSTITUT</text>
+    <text x="45" y="110" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6.5" font-weight="300" letter-spacing="1.2" fill="#8A8A8A">FÜR METAPHYSIK GmbH</text>
+  </svg>
+
+  <div class="hcenter">
+    <div class="bnar">مؤسسة الأڤاتار للعلوم الميتافيزيقية</div>
+    <div class="bnen">Avatar Institut für Metaphysik GmbH</div>
+    <div class="tagrow">
+      <span class="tgen">Where Science Meets Consciousness</span>
+      <span class="dot">·</span>
+      <span class="tgar">حيث يلتقي العلم بالوعي</span>
+    </div>
+  </div>
+
+  <div class="hmeta">
+    <div class="bpill">Brand System Board</div>
+    <div class="stags">
+      <span class="stag">Luxury</span>
+      <span class="stag">Academic</span>
+      <span class="stag">Spiritual</span>
+      <span class="stag">Premium</span>
+    </div>
+  </div>
+</div>
+
+<div class="gold-line"></div>
+
+<!-- ═══════════════════════════════════════════════ ROW 1 -->
+<div class="grow">
+
+  <div class="gc">
+    <div class="sl">Color Palette</div>
+    <div class="al">الألوان المعتمدة</div>
+    <div class="prow">
+      <div class="si"><div class="sw" style="background:#C6A15B;"></div><div><div class="shx">#C6A15B</div><div class="snm">Premium Gold</div></div></div>
+      <div class="si"><div class="sw" style="background:#0F0F0F;border-color:#333;"></div><div><div class="shx">#0F0F0F</div><div class="snm">Luxury Black</div></div></div>
+      <div class="si"><div class="sw" style="background:#1D1D1D;border-color:#333;"></div><div><div class="shx">#1D1D1D</div><div class="snm">Secondary BG</div></div></div>
+      <div class="si"><div class="sw" style="background:#F7F5F0;"></div><div><div class="shx">#F7F5F0</div><div class="snm">Ivory White</div></div></div>
+      <div class="si"><div class="sw" style="background:#8A8A8A;"></div><div><div class="shx">#8A8A8A</div><div class="snm">Muted Text</div></div></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Typography</div>
+    <div class="al">الخطوط والطباعة</div>
+    <div style="margin-top:6px;">
+      <div class="ti2">
+        <div class="tr2">Arabic Heading</div>
+        <div class="ts-ar">العلوم الميتافيزيقية</div>
+        <div class="tfn">Cairo Bold</div>
+      </div>
+      <div class="ti2">
+        <div class="tr2">English H1</div>
+        <div class="ts-h1">Metaphysical Sciences</div>
+        <div class="tfn">Playfair Display Bold</div>
+      </div>
+      <div class="ti2">
+        <div class="tr2">English H2</div>
+        <div class="ts-h2">Where Science Meets Consciousness</div>
+        <div class="tfn">Cormorant Garamond Italic</div>
+      </div>
+      <div class="ti2">
+        <div class="tr2">Body / Caption</div>
+        <div class="ts-bd">Advancing the study of metaphysics and consciousness through research and education.</div>
+        <div class="tfn">Inter Regular</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Brand Overview</div>
+    <div class="al">نظرة عامة على العلامة</div>
+    <div class="mb">
+      <div class="ml">Mission · الرسالة</div>
+      <div class="mtar">تعزيز دراسة الميتافيزيقا والوعي والروحانية من خلال البحث العلمي والتعليم التحويلي.</div>
+      <div class="mten">Advancing the study of metaphysics, consciousness and human development through research and transformative learning.</div>
+    </div>
+    <div class="vb">
+      <div class="ml">Vision · الرؤية</div>
+      <div class="mtar">أن تصبح الأكاديمية الدولية الرائدة التي تربط بين العلم والوعي والحكمة الروحية.</div>
+      <div class="mten">To become the leading international academy connecting science, consciousness and spiritual wisdom.</div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Category</div>
+    <div class="al">التصنيف</div>
+    <div class="cpills">
+      <div class="cp"><span class="cpen">Metaphysical Sciences Academy</span><span class="cpar">أكاديمية العلوم</span></div>
+      <div class="cp"><span class="cpen">Research Institute</span><span class="cpar">معهد أبحاث</span></div>
+      <div class="cp"><span class="cpen">Spiritual Education</span><span class="cpar">تعليم روحي</span></div>
+    </div>
+    <div class="vp">
+      <div class="ml">Value Proposition · القيمة</div>
+      <div class="mten">Combining academic rigor, scientific inquiry and spiritual wisdom into a world-class learning experience.</div>
+      <div class="mtar">الجمع بين الصرامة الأكاديمية والحكمة الروحية في تجربة عالمية.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sdiv"></div>
+
+<!-- ═══════════════════════════════════════════════ ROW 2 -->
+<div class="grow">
+
+  <div class="gc">
+    <div class="sl">Core Values</div>
+    <div class="al">القيم الأساسية</div>
+    <div class="vgrid">
+      <div class="vc"><div class="ven">Wisdom</div><div class="var2">الحكمة</div></div>
+      <div class="vc"><div class="ven">Knowledge</div><div class="var2">المعرفة</div></div>
+      <div class="vc"><div class="ven">Research</div><div class="var2">البحث</div></div>
+      <div class="vc"><div class="ven">Consciousness</div><div class="var2">الوعي</div></div>
+      <div class="vc"><div class="ven">Integrity</div><div class="var2">النزاهة</div></div>
+      <div class="vc"><div class="ven">Transformation</div><div class="var2">التحول</div></div>
+      <div class="vc"><div class="ven">Service</div><div class="var2">الخدمة</div></div>
+      <div class="vc"><div class="ven">Human Dev.</div><div class="var2">تنمية الإنسان</div></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Voice &amp; Tone</div>
+    <div class="al">نبرة التواصل</div>
+    <div class="tlist">
+      <div class="titem"><span class="ten">Academic</span><span class="tar">أكاديمي</span></div>
+      <div class="titem"><span class="ten">Intellectual</span><span class="tar">فكري</span></div>
+      <div class="titem"><span class="ten">Wise</span><span class="tar">حكيم</span></div>
+      <div class="titem"><span class="ten">Inspirational</span><span class="tar">ملهم</span></div>
+      <div class="titem"><span class="ten">Trustworthy</span><span class="tar">موثوق</span></div>
+      <div class="titem"><span class="ten">Premium</span><span class="tar">راقي</span></div>
+      <div class="titem"><span class="ten">Human-Centered</span><span class="tar">إنساني</span></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Target Audience</div>
+    <div class="al">الجمهور المستهدف</div>
+    <div class="agrid">
+      <div class="aitem"><div class="aicon">⚗</div><div class="aen">Researchers</div><div class="aar">الباحثون</div></div>
+      <div class="aitem"><div class="aicon">◈</div><div class="aen">Students</div><div class="aar">الطلاب</div></div>
+      <div class="aitem"><div class="aicon">◎</div><div class="aen">Spiritual Seekers</div><div class="aar">باحثو المعنى</div></div>
+      <div class="aitem"><div class="aicon">♡</div><div class="aen">Coaches & Therapists</div><div class="aar">المدربون</div></div>
+      <div class="aitem"><div class="aicon">◇</div><div class="aen">Professionals</div><div class="aar">المهنيون</div></div>
+      <div class="aitem"><div class="aicon">✦</div><div class="aen">International</div><div class="aar">دولي</div></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Knowledge Pillars</div>
+    <div class="al">مجالات المعرفة</div>
+    <div class="plist">
+      <div class="pitem"><span class="pen">Metaphysics</span><span class="par">الميتافيزيقا</span></div>
+      <div class="pitem"><span class="pen">Consciousness Studies</span><span class="par">دراسات الوعي</span></div>
+      <div class="pitem"><span class="pen">Science & Spirituality</span><span class="par">العلم والروحانية</span></div>
+      <div class="pitem"><span class="pen">Sacred Symbolism</span><span class="par">الرمزية المقدسة</span></div>
+      <div class="pitem"><span class="pen">Human Development</span><span class="par">تنمية الإنسان</span></div>
+      <div class="pitem"><span class="pen">Applied Wisdom</span><span class="par">الحكمة التطبيقية</span></div>
+      <div class="pitem"><span class="pen">Research Publications</span><span class="par">الأبحاث</span></div>
+      <div class="pitem"><span class="pen">Books & Resources</span><span class="par">الكتب والمراجع</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sdiv"></div>
+
+<!-- ═══════════════════════════════════════════════ ROW 3 -->
+<div class="grow">
+
+  <div class="gc" style="flex:1.2;">
+    <div class="sl">Services</div>
+    <div class="al">الخدمات</div>
+    <div class="slist">
+      <div class="sitem"><span class="sen">Online Courses</span><span class="sar">الدورات الإلكترونية</span></div>
+      <div class="sitem"><span class="sen">Certification Programs</span><span class="sar">البرامج المعتمدة</span></div>
+      <div class="sitem"><span class="sen">Private Consultations</span><span class="sar">الاستشارات الخاصة</span></div>
+      <div class="sitem"><span class="sen">Research Publications</span><span class="sar">النشر العلمي</span></div>
+      <div class="sitem"><span class="sen">Digital Library</span><span class="sar">المكتبة الرقمية</span></div>
+      <div class="sitem"><span class="sen">Community Platform</span><span class="sar">المجتمع المعرفي</span></div>
+      <div class="sitem"><span class="sen">Events & Retreats</span><span class="sar">الفعاليات والخلوات</span></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Brand Guidelines</div>
+    <div class="al">إرشادات العلامة التجارية</div>
+    <div class="ggrid">
+      <div class="dob">
+        <div class="gh doh">DO · افعل</div>
+        <div class="gi">Use gold as accent color</div>
+        <div class="gi">Maintain luxury aesthetics</div>
+        <div class="gi">Use generous spacing</div>
+        <div class="gi">Highlight credibility</div>
+        <div class="gi">Bilingual consistency</div>
+      </div>
+      <div class="dnb">
+        <div class="gh dnh">DON'T · لا تفعل</div>
+        <div class="gi">Use flashy colors</div>
+        <div class="gi">Overcrowd pages</div>
+        <div class="gi">Use too many fonts</div>
+        <div class="gi">Low-quality imagery</div>
+        <div class="gi">Aggressive tone</div>
+      </div>
+    </div>
+    <div class="sref">
+      <div class="sl" style="margin-bottom:5px;">Style References</div>
+      <div class="rtags">
+        <span class="rtag">Harvard</span>
+        <span class="rtag">Oxford</span>
+        <span class="rtag">Apple</span>
+        <span class="rtag">MIT Media Lab</span>
+        <span class="rtag">Luxury Arab Institution</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gc" style="flex:0.85;">
+    <div class="sl">Website Features</div>
+    <div class="al">مميزات الموقع</div>
+    <div class="flist">
+      <div class="fitem"><span class="fen">Multilingual</span><span class="far2">متعدد اللغات</span></div>
+      <div class="fitem"><span class="fen">Student Dashboard</span><span class="far2">لوحة الطالب</span></div>
+      <div class="fitem"><span class="fen">Stripe Payments</span><span class="far2">الدفع الإلكتروني</span></div>
+      <div class="fitem"><span class="fen">Appointment Booking</span><span class="far2">حجز المواعيد</span></div>
+      <div class="fitem"><span class="fen">AI Assistant</span><span class="far2">مساعد ذكي</span></div>
+      <div class="fitem"><span class="fen">Digital Library</span><span class="far2">مكتبة رقمية</span></div>
+      <div class="fitem"><span class="fen">Certificates</span><span class="far2">الشهادات</span></div>
+    </div>
+  </div>
+
+  <div class="gc">
+    <div class="sl">Logo System</div>
+    <div class="al">منظومة الشعار</div>
+    <div class="lvs">
+
+      <!-- Dark version -->
+      <div class="lvd">
+        <svg width="44" height="56" viewBox="0 0 44 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="20" r="16" fill="none" stroke="#C6A15B" stroke-width="1"/>
+          <circle cx="22" cy="20" r="2.8" fill="#C6A15B"/>
+          <line x1="4" y1="42" x2="40" y2="42" stroke="#C6A15B" stroke-width="0.3" opacity="0.5"/>
+          <text x="22" y="48" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="5" letter-spacing="1.5" fill="#F7F5F0">AVATAR INSTITUT</text>
+          <text x="22" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="4" letter-spacing="0.5" fill="#8A8A8A">FÜR METAPHYSIK</text>
+        </svg>
+        <div>
+          <div class="vnar" style="color:#F7F5F0;">مؤسسة الأڤاتار</div>
+          <div class="vnen">Dark / Primary</div>
+        </div>
+      </div>
+
+      <!-- Light version -->
+      <div class="lvl">
+        <svg width="44" height="56" viewBox="0 0 44 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="20" r="16" fill="none" stroke="#0F0F0F" stroke-width="1"/>
+          <circle cx="22" cy="20" r="2.8" fill="#0F0F0F"/>
+          <line x1="4" y1="42" x2="40" y2="42" stroke="#0F0F0F" stroke-width="0.3" opacity="0.4"/>
+          <text x="22" y="48" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="5" letter-spacing="1.5" fill="#0F0F0F">AVATAR INSTITUT</text>
+          <text x="22" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="4" letter-spacing="0.5" fill="#555">FÜR METAPHYSIK</text>
+        </svg>
+        <div>
+          <div class="vnar" style="color:#0F0F0F;">مؤسسة الأڤاتار</div>
+          <div class="vnen" style="color:#555;">Light / Secondary</div>
+        </div>
+      </div>
+
+      <!-- Monogram -->
+      <div class="mono">
+        <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="19" cy="19" r="16" fill="none" stroke="#C6A15B" stroke-width="1"/>
+          <circle cx="19" cy="19" r="3" fill="#C6A15B"/>
+        </svg>
+        <div class="mw">AVATAR<br>INSTITUT</div>
+      </div>
+
+      <!-- Tagline lockup -->
+      <div class="tlup">
+        <div class="tlbl">Tagline Lockup</div>
+        <div class="tlen">Where Science Meets Consciousness</div>
+        <div class="tlar">حيث يلتقي العلم بالوعي</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="gold-line"></div>
+
+<!-- ═══════════════════════════════════════════════ FOOTER -->
+<div class="ftr">
+  <div class="fl">
+    <div>
+      <div class="fbrar">مؤسسة الأڤاتار للعلوم الميتافيزيقية</div>
+      <div class="fbrde">Avatar Institut für Metaphysik GmbH</div>
+    </div>
+    <div class="fvd"></div>
+    <div class="ftl">Where Science Meets Consciousness</div>
+  </div>
+  <div class="fyr">Brand System Board · 2026</div>
+</div>
+
+</body>
+</html>
